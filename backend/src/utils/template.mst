@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:300,400,600,700,900">
+    <style>
+      body {
+        font-family: 'Raleway';
+      }
+
+      p {
+        margin: 0 0 4px 0;
+      }
+
+      h1, h3 {
+        margin: 0 0 16px 0;
+      }
+
+      .header {
+        display: flex;
+        align-items: center;
+        padding: 16px;
+        height: 60px;
+        background: #2b2c35;
+        color: white;
+        font-family: 'Raleway';
+        font-size: 21px;
+        font-weight: 900;
+      }
+
+      .order, .items, .delivery, .payment, .info {
+        padding: 16px;
+      }
+
+      .items .item {
+        display: flex;
+        margin-bottom: 8px;
+      }
+
+      .items .item .details {
+        max-width: 400px;
+        width: 100%;
+      }
+
+      .items .item .image {
+        width: 80px;
+        height: 80px;
+        object-fit: contain;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">CLOSETINN</div>
+    <div class="order">
+      <h1>Recebemos o seu pedido</h1>
+      <p>O seu pedido será processado nas proximas horas.</p>
+      <br><br>
+      <p><strong>Número do pedido: </strong>{{_id}}</p>
+      <p><strong>Pedido em: </strong>{{createdAt}}</p>
+    </div>
+    <hr>
+  	<div class="items">
+  		<h3>Itens do Pedido</h3>
+  		{{#products}}
+        <div class="item">
+         <img class="image"src={{image_medium_url}} />
+         <div class="details">
+           <p>{{productName}}</p>
+           <p>R$<span>{{price}}</span></p>
+           <hr>
+           <p>Quantidade: {{quantity}}</p>
+           <p>Subtotal: R$<span>{{subtotal}}</span></p>
+         </div>
+        </div>
+  		{{/products}}
+  	</div>
+    <hr>
+    <div class="delivery">
+      <h3>Entrega</h3>
+      <p><span>{{address.street}},</span> <span>{{address.streetNumber}}</span> - <span>{{address.neighborhood}}</span></p>
+      <p></span>{{address.city}}</span> </span>{{address.state}}</span> </span>{{address.postcode}}</span></p>
+
+    </div>
+    <hr>
+    <div class="payment">
+  		<h3>Pagamento</h3>
+  		<p>{{creditCard.holder}}</p>
+  		<p>{{creditCard.number}}</p>
+      <p><strong>Preço total: </strong> R$<span>{{totalPrice}}</span></p>
+  	</div>
+    <hr>
+    <div class="info">
+      <p>Quando o pedido for concluído você receberá um email de confirmação.<br>
+    Na tela Meus Pedidos você pode cancelar o seu pedido a qualquer momento, enquanto ele ainda estiver em processamento.</p>
+    </div>
+  </body>
+</html>

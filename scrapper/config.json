@@ -1,0 +1,11 @@
+{
+    "mongodb":{
+        "connectionString": "mongodb://localhost:27017/fashionbot",
+        "host": "ds155411.mlab.com:55411/fashionbot",
+        "user": "admin",
+        "password": "azzaropourhome2",
+        "port": 27017,
+        "db": "fashionbot",
+        "collection": "clothes"
+    }
+}

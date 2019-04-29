@@ -1,0 +1,11 @@
+{
+    "mongodb":{
+        "connectionString": "mongodb://gkodama:azzaropourhome2@cluster0-shard-00-00-svs1p.mongodb.net:27017,cluster0-shard-00-01-svs1p.mongodb.net:27017,cluster0-shard-00-02-svs1p.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin",
+        "host": "ds155411.mlab.com:55411/fashionbot",
+        "user": "admin",
+        "password": "azzaropourhome2",
+        "port": 27017,
+        "db": "fashionbot",
+        "collection": "clothes"
+    }
+}

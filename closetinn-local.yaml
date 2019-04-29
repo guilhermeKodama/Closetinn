@@ -1,0 +1,340 @@
+########## REDIS ##########
+apiVersion: v1
+kind: Service
+metadata:
+  name: redis
+  labels:
+    env: production
+spec:
+  selector:
+    app: redis
+  ports:
+  - port: 6379
+    targetPort: 6379
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: redis
+  labels:
+    env: production
+    app: redis
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        env: production
+        app: redis
+    spec:
+      containers:
+      - name: redis
+        image: redis
+        resources:
+          requests:
+            cpu: 10m
+            memory: 100Mi
+        ports:
+        - containerPort: 6379
+---
+########## SOCKET SERVER PRIMARY ##########
+apiVersion: v1
+kind: Service
+metadata:
+  name: ss-primary
+  labels:
+    env: production
+spec:
+  selector:
+    app: ss-primary
+  ports:
+  - port: 80
+    targetPort: 5000
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: ss-primary
+  labels:
+    env: production
+    app: ss-primary
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        env: production
+        app: ss-primary
+    spec:
+      containers:
+      - name: closetinn-server-socket-primary
+        image: closetinn-server-socket:latest
+        env:
+          - name: DB_HOST
+            value: "mongodb://gkodama:azzaropourhome2@cluster0-shard-00-00-svs1p.mongodb.net:27017,cluster0-shard-00-01-svs1p.mongodb.net:27017,cluster0-shard-00-02-svs1p.mongodb.net:27017/fashionbot?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin"
+          - name: DB_PORT
+            value: "27017"
+          - name: DB_DATABASE
+            value: "fashionbot"
+        imagePullPolicy: IfNotPresent
+        resources:
+          requests:
+            cpu: 50m
+            memory: 100Mi
+        ports:
+        - containerPort: 5000
+---
+########## SOCKET SERVER PRIMARY ##########
+apiVersion: v1
+kind: Service
+metadata:
+  name: ss-slave
+  labels:
+    env: production
+spec:
+  selector:
+    app: ss-slave
+  ports:
+  - port: 80
+    targetPort: 5000
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: ss-slave
+  labels:
+    env: production
+    app: ss-slave
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        env: production
+        app: ss-slave
+    spec:
+      containers:
+      - name: closetinn-server-socket-slave
+        image: closetinn-server-socket:latest
+        env:
+          - name: DB_HOST
+            value: "mongodb://gkodama:azzaropourhome2@cluster0-shard-00-00-svs1p.mongodb.net:27017,cluster0-shard-00-01-svs1p.mongodb.net:27017,cluster0-shard-00-02-svs1p.mongodb.net:27017/fashionbot?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin"
+          - name: DB_PORT
+            value: "27017"
+          - name: DB_DATABASE
+            value: "fashionbot"
+        imagePullPolicy: IfNotPresent
+        resources:
+          requests:
+            cpu: 50m
+            memory: 100Mi
+        ports:
+        - containerPort: 5000
+---
+########## MLAPI ##########
+apiVersion: v1
+kind: Service
+metadata:
+  name: mlapi
+  labels:
+    env: production
+spec:
+  selector:
+    app: mlapi
+  ports:
+  - port: 80
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: mlapi
+  labels:
+    env: production
+    app: mlapi
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        env: production
+        app: mlapi
+    spec:
+      containers:
+      - name: closetinn-ml-api
+        image: closetinn-ml-api:latest
+        imagePullPolicy: IfNotPresent
+        resources:
+          requests:
+            cpu: 10m
+            memory: 30Mi
+        ports:
+        - containerPort: 80
+---
+########## SCRAPPER ##########
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: scrapper
+  labels:
+    env: production
+    app: scrapper
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        env: production
+        app: scrapper
+    spec:
+      containers:
+      - name: closetinn-scrapper
+        image: closetinn-scrapper:latest
+        env:
+          - name: DB_HOST
+            value: "mongodb://gkodama:azzaropourhome2@cluster0-shard-00-00-svs1p.mongodb.net:27017,cluster0-shard-00-01-svs1p.mongodb.net:27017,cluster0-shard-00-02-svs1p.mongodb.net:27017/fashionbot?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin"
+          - name: DB_PORT
+            value: "27017"
+          - name: DB_DATABASE
+            value: "fashionbot"
+          - name: COLLECTION_CLOTHES
+            value: "clothes"
+          - name: COLLECTION_PRICE_HISTORY
+            value: "clothesPriceHistory"
+        imagePullPolicy: IfNotPresent
+        resources:
+          requests:
+            cpu: 10m
+            memory: 50Mi
+---
+########## CRONJOBS ##########
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: cronjobs
+  labels:
+    env: production
+    app: cronjobs
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        env: production
+        app: cronjobs
+    spec:
+      containers:
+      - name: closetinn-cron-jobs
+        image: closetinn-cron-jobs:latest
+        env:
+          - name: CLOSETINN_ENV
+            value: "production"
+          - name: ADMIN_EMAILS
+            value: "guilherme.kodama@gmail.com,kayron.scabral@gmail.com"
+          - name: DB_HOST
+            value: "mongodb://gkodama:azzaropourhome2@cluster0-shard-00-00-svs1p.mongodb.net:27017,cluster0-shard-00-01-svs1p.mongodb.net:27017,cluster0-shard-00-02-svs1p.mongodb.net:27017/fashionbot?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin"
+          - name: DB_PORT
+            value: "27017"
+          - name: DB_DATABASE
+            value: "fashionbot"
+          - name: TYPEFORM_API
+            value: "https://api.typeform.com"
+          - name: TYPEFORM_TOKEN
+            value: "Bearer 5Wi7gdVxeffTeEGgpe9HQHTwsVwBTDgbU5tKWh6bzkTd"
+        imagePullPolicy: IfNotPresent
+        resources:
+          requests:
+            cpu: 10m
+            memory: 50Mi
+---
+########## BACKEND ##########
+# kind: Service
+# apiVersion: v1
+# metadata:
+#  name: my-service
+# spec:
+#  selector:
+#    app: MyApp
+#  ports:
+#  - protocol: TCP
+#    port: 80
+#    targetPort: 9376
+# This specification will create a new Service object named “my-service” which
+# targets TCP port 9376 on any Pod with the "app=MyApp" label.
+# This Service will also be assigned an IP address (sometimes called the “cluster IP”),
+# which is used by the service proxies (see below).
+# The Service’s selector will be evaluated continuously and the results will be POSTed to an
+# Endpoints object also named “my-service”.
+# Note that a Service can map an incoming port to any targetPort.
+# By default the targetPort will be set to the same value as the port field.
+# Perhaps more interesting is that targetPort can be a string,
+# referring to the name of a port in the backend Pods.
+# The actual port number assigned to that name can be different in each backend Pod.
+# This offers a lot of flexibility for deploying and evolving your Services.
+# For example, you can change the port number that pods expose in the next version of your
+# backend software, without breaking clients.
+#
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend
+  labels:
+    env: production
+spec:
+  selector:
+    app: backend
+  type: NodePort #LoadBalancer
+  ports:
+  - port: 80
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: backend
+  labels:
+    env: production
+    app: backend
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        env: production
+        app: backend
+    spec:
+      containers:
+      - name: closetinn-backend
+        image: closetinn-backend:latest
+        env:
+          - name: DB_HOST
+            value: "mongodb://gkodama:azzaropourhome2@cluster0-shard-00-00-svs1p.mongodb.net:27017,cluster0-shard-00-01-svs1p.mongodb.net:27017,cluster0-shard-00-02-svs1p.mongodb.net:27017/fashionbot?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin"
+          - name: DB_PORT
+            value: "27017"
+          - name: DB_DATABASE
+            value: "fashionbot"
+          - name: TOKEN_SECRET
+            value: "018c67801bbc6f65b3ef0ecd99e7c0e8"
+          - name: PASSWORD_SECRET
+            value: "c0a6137c0a9b8d24da27cf972e8ddc14"
+          - name: FACEBOOK_GRAPH_HOST
+            value: "https://graph.facebook.com"
+          - name: FACEBOOK_APP_ACCESS_TOKEN
+            value: "1557384474356665|jJXKWOeYqEPpSYKrP8o9hqT9p-o"
+          - name: PREFIX
+            value: "/api"
+          - name: CLOTHES_COLLECTION
+            value: "clothes"
+          - name: USERS_COLLECTION
+            value: "users"
+          - name: CLOUDINARY_USER
+            value: "closetinn"
+          - name: CLOUDINARY_API_KEY
+            value: "494558945392248"
+          - name: CLOUDINARY_API_SECRET
+            value: "RXGDWht3A8SbwJhIyb9nO7jETXU"
+        imagePullPolicy: IfNotPresent
+        resources:
+          requests:
+            cpu: 10m
+            memory: 50Mi
+        ports:
+        - containerPort: 80

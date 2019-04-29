@@ -1,0 +1,54 @@
+@import '../../styles/styles.scss';
+
+.Dropdown {
+  @extend .card;
+  padding: 0 20px;
+  position: relative;
+  width: 220px;
+
+  > button {
+    padding: 0;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: capitalize;
+    font-family: Raleway;
+    font-size: $font-size-medium;
+    color: $charcoal-grey;
+
+    &:focus {
+      +.dropdownContent {
+        display: flex;
+      }
+    }
+  }
+}
+
+.dropdownContent {
+  @extend .card;
+  padding: $s-size 20px;
+  z-index: 1;
+  margin-top: 4px;
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  left: 0;
+  right: 0;
+
+  > * {
+    font-family: 'Raleway';
+    margin: $s-size 0;
+    text-align: left;
+    opacity: 0.5;
+    text-transform: capitalize;
+    font-size: $font-size-medium;
+    color: $charcoal-grey;
+  }
+
+  &:hover {
+    display: flex;
+  }
+  
+}

@@ -1,0 +1,6 @@
+'''
+ CONFIG FILE - SET IMPORTANT ENV VARAIBLES HERE
+'''
+import os
+
+DATABASE_URI = os.environ['DB_HOST']

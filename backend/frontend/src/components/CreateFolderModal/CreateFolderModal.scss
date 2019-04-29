@@ -1,0 +1,59 @@
+@import '../../styles/styles.scss';
+
+.CreateFolderModal {
+  padding: 50px 70px;
+  display: flex;
+  flex-direction: column;
+
+  > div {
+    margin-bottom: 40px;
+    width: 100%;
+  }
+}
+
+.divider {
+  height: 1px;
+  width: 100px;
+  background-color: $charcoal-grey;
+}
+
+.titleWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  width: 556px;
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: $charcoal-grey;
+  text-align: center;
+}
+
+.secondaryTitle {
+  font-size: $font-size-medium;
+  font-weight: bold;
+  color: $charcoal-grey;
+  text-align: center;
+}
+
+.input {
+  width: 100%;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.emojiWrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 48px);
+  grid-gap: $s-size;
+  justify-content: center;
+}
+
+.inputFilter {
+  width: 100%;
+  background: none;
+}

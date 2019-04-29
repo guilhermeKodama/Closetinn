@@ -1,0 +1,52 @@
+@import '../../styles/styles.scss';
+
+.ClosetRemoveFolderModal {
+
+}
+
+.wrapper {
+  padding: 50px 215px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  > * {
+    margin: 10px 0;
+  }
+
+  > p {
+    max-width: 350px;
+    font-size: 2.2rem;
+    font-weight: bold;
+    text-align: center;
+    color: $charcoal-grey;
+  }
+}
+
+.actions {
+  display: flex;
+  flex-direction: row;
+
+  > * {
+    margin: 0 $s-size;
+  }
+}
+
+.confirmButton {
+  @extend .buttonIcon;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: white;
+  background-color: $dark-sky-blue;
+}
+
+.cancelButton {
+  @extend .buttonIcon;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: white;
+  background-color: $scarlet;
+}

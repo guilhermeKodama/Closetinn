@@ -1,0 +1,284 @@
+2018-11-22 09:57:17,921:DEBUG:certbot.main:certbot version: 0.28.0
+2018-11-22 09:57:17,921:DEBUG:certbot.main:Arguments: ['-d', 'closetinn.com.br', '--manual', '--logs-dir', 'certbot', '--config-dir', 'certbot', '--work-dir', 'certbot', '--preferred-challenges', 'dns']
+2018-11-22 09:57:17,921:DEBUG:certbot.main:Discovered plugins: PluginsRegistry(PluginEntryPoint#manual,PluginEntryPoint#null,PluginEntryPoint#standalone,PluginEntryPoint#webroot)
+2018-11-22 09:57:17,965:DEBUG:certbot.log:Root logging level set at 20
+2018-11-22 09:57:17,966:INFO:certbot.log:Saving debug log to /Users/guilherme/Documents/Documents/Projects/Machine Learning/Closetinn/Closetinn - Main API/certbot/letsencrypt.log
+2018-11-22 09:57:17,968:DEBUG:certbot.plugins.selection:Requested authenticator manual and installer None
+2018-11-22 09:57:17,975:DEBUG:certbot.plugins.selection:Single candidate plugin: * manual
+Description: Manual configuration or run your own shell scripts
+Interfaces: IAuthenticator, IPlugin
+Entry point: manual = certbot.plugins.manual:Authenticator
+Initialized: <certbot.plugins.manual.Authenticator object at 0x10276ed90>
+Prep: True
+2018-11-22 09:57:17,976:DEBUG:certbot.plugins.selection:Selected authenticator <certbot.plugins.manual.Authenticator object at 0x10276ed90> and installer None
+2018-11-22 09:57:17,976:INFO:certbot.plugins.selection:Plugins selected: Authenticator manual, Installer None
+2018-11-22 09:57:17,984:DEBUG:certbot.main:Picked account: <Account(RegistrationResource(body=Registration(status=None, terms_of_service_agreed=None, agreement=None, only_return_existing=None, contact=(), key=None), uri=u'https://acme-v02.api.letsencrypt.org/acme/acct/46281619', new_authzr_uri=None, terms_of_service=None), cfa5d50aae76b9aa2e1dcf6d4e3c44d9, Meta(creation_host=u'Guilherme-Mac-2.local', creation_dt=datetime.datetime(2018, 11, 22, 11, 48, 21, tzinfo=<UTC>)))>
+2018-11-22 09:57:18,016:DEBUG:acme.client:Sending GET request to https://acme-v02.api.letsencrypt.org/directory.
+2018-11-22 09:57:18,047:DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): acme-v02.api.letsencrypt.org:443
+2018-11-22 09:57:18,851:DEBUG:urllib3.connectionpool:https://acme-v02.api.letsencrypt.org:443 "GET /directory HTTP/1.1" 200 658
+2018-11-22 09:57:18,852:DEBUG:acme.client:Received response:
+HTTP 200
+Server: nginx
+Content-Type: application/json
+Content-Length: 658
+X-Frame-Options: DENY
+Strict-Transport-Security: max-age=604800
+Expires: Thu, 22 Nov 2018 11:57:18 GMT
+Cache-Control: max-age=0, no-cache, no-store
+Pragma: no-cache
+Date: Thu, 22 Nov 2018 11:57:18 GMT
+Connection: keep-alive
+
+{
+  "JgRFn2jN_S0": "https://community.letsencrypt.org/t/adding-random-entries-to-the-directory/33417",
+  "keyChange": "https://acme-v02.api.letsencrypt.org/acme/key-change",
+  "meta": {
+    "caaIdentities": [
+      "letsencrypt.org"
+    ],
+    "termsOfService": "https://letsencrypt.org/documents/LE-SA-v1.2-November-15-2017.pdf",
+    "website": "https://letsencrypt.org"
+  },
+  "newAccount": "https://acme-v02.api.letsencrypt.org/acme/new-acct",
+  "newNonce": "https://acme-v02.api.letsencrypt.org/acme/new-nonce",
+  "newOrder": "https://acme-v02.api.letsencrypt.org/acme/new-order",
+  "revokeCert": "https://acme-v02.api.letsencrypt.org/acme/revoke-cert"
+}
+2018-11-22 09:57:18,856:INFO:certbot.main:Obtaining a new certificate
+2018-11-22 09:57:18,993:DEBUG:certbot.crypto_util:Generating key (2048 bits): /Users/guilherme/Documents/Documents/Projects/Machine Learning/Closetinn/Closetinn - Main API/certbot/keys/0001_key-certbot.pem
+2018-11-22 09:57:18,995:DEBUG:certbot.crypto_util:Creating CSR: /Users/guilherme/Documents/Documents/Projects/Machine Learning/Closetinn/Closetinn - Main API/certbot/csr/0001_csr-certbot.pem
+2018-11-22 09:57:18,996:DEBUG:acme.client:Requesting fresh nonce
+2018-11-22 09:57:18,996:DEBUG:acme.client:Sending HEAD request to https://acme-v02.api.letsencrypt.org/acme/new-nonce.
+2018-11-22 09:57:19,208:DEBUG:urllib3.connectionpool:https://acme-v02.api.letsencrypt.org:443 "HEAD /acme/new-nonce HTTP/1.1" 204 0
+2018-11-22 09:57:19,210:DEBUG:acme.client:Received response:
+HTTP 204
+Server: nginx
+Replay-Nonce: PzzndQ1hFzR2oALUwO5rUWTwwDvg0udFsXDBurjuuO8
+X-Frame-Options: DENY
+Strict-Transport-Security: max-age=604800
+Expires: Thu, 22 Nov 2018 11:57:19 GMT
+Cache-Control: max-age=0, no-cache, no-store
+Pragma: no-cache
+Date: Thu, 22 Nov 2018 11:57:19 GMT
+Connection: keep-alive
+
+
+2018-11-22 09:57:19,210:DEBUG:acme.client:Storing nonce: PzzndQ1hFzR2oALUwO5rUWTwwDvg0udFsXDBurjuuO8
+2018-11-22 09:57:19,210:DEBUG:acme.client:JWS payload:
+{
+  "identifiers": [
+    {
+      "type": "dns", 
+      "value": "closetinn.com.br"
+    }
+  ]
+}
+2018-11-22 09:57:19,212:DEBUG:acme.client:Sending POST request to https://acme-v02.api.letsencrypt.org/acme/new-order:
+{
+  "protected": "eyJub25jZSI6ICJQenpuZFExaEZ6UjJvQUxVd081clVXVHd3RHZnMHVkRnNYREJ1cmp1dU84IiwgInVybCI6ICJodHRwczovL2FjbWUtdjAyLmFwaS5sZXRzZW5jcnlwdC5vcmcvYWNtZS9uZXctb3JkZXIiLCAia2lkIjogImh0dHBzOi8vYWNtZS12MDIuYXBpLmxldHNlbmNyeXB0Lm9yZy9hY21lL2FjY3QvNDYyODE2MTkiLCAiYWxnIjogIlJTMjU2In0", 
+  "payload": "ewogICJpZGVudGlmaWVycyI6IFsKICAgIHsKICAgICAgInR5cGUiOiAiZG5zIiwgCiAgICAgICJ2YWx1ZSI6ICJjbG9zZXRpbm4uY29tLmJyIgogICAgfQogIF0KfQ", 
+  "signature": "uMH1FETjiI1dnTgst-fsBIa90U3SNlsuHG1D_7k501yrSoNxY4zvGsGLPrDabfWTAeAnws7HdAO0zF7dgR2gImHqfYhmHw4V2n1OO_8YgbcfxXO97M7N8InHnxZSIUFEa6zKCANJS328Bguhn-dUpKQRNavGVF4ypNDjtin5aSbJgihHVjYBz2-04ruOq19dsdTlbty2_vGZoD8lW1mNpXsbjcIA_W_GugWRF1P3ihehxoDSUcsa2Q3lzxABgPH_purQXXw_G6_z37MmDRhXAoVC0mwAXh0DySfFg2rOFaU4Czt3RoFrKk8ig8zxTPAbmF0aRNGHIywUXlAT7GDBXw"
+}
+2018-11-22 09:57:19,472:DEBUG:urllib3.connectionpool:https://acme-v02.api.letsencrypt.org:443 "POST /acme/new-order HTTP/1.1" 201 375
+2018-11-22 09:57:19,473:DEBUG:acme.client:Received response:
+HTTP 201
+Server: nginx
+Content-Type: application/json
+Content-Length: 375
+Boulder-Requester: 46281619
+Location: https://acme-v02.api.letsencrypt.org/acme/order/46281619/186859874
+Replay-Nonce: VTtopK-fgFpG9QW2VtJe7_oqubR4xLj2vZwCZb9EY-E
+X-Frame-Options: DENY
+Strict-Transport-Security: max-age=604800
+Expires: Thu, 22 Nov 2018 11:57:19 GMT
+Cache-Control: max-age=0, no-cache, no-store
+Pragma: no-cache
+Date: Thu, 22 Nov 2018 11:57:19 GMT
+Connection: keep-alive
+
+{
+  "status": "pending",
+  "expires": "2018-11-29T11:57:19.337043996Z",
+  "identifiers": [
+    {
+      "type": "dns",
+      "value": "closetinn.com.br"
+    }
+  ],
+  "authorizations": [
+    "https://acme-v02.api.letsencrypt.org/acme/authz/liD6K9tpImtI7n4KK0z6NPFxnuKOW0eSaWEsqN-g_s4"
+  ],
+  "finalize": "https://acme-v02.api.letsencrypt.org/acme/finalize/46281619/186859874"
+}
+2018-11-22 09:57:19,473:DEBUG:acme.client:Storing nonce: VTtopK-fgFpG9QW2VtJe7_oqubR4xLj2vZwCZb9EY-E
+2018-11-22 09:57:19,474:DEBUG:acme.client:Sending GET request to https://acme-v02.api.letsencrypt.org/acme/authz/liD6K9tpImtI7n4KK0z6NPFxnuKOW0eSaWEsqN-g_s4.
+2018-11-22 09:57:19,698:DEBUG:urllib3.connectionpool:https://acme-v02.api.letsencrypt.org:443 "GET /acme/authz/liD6K9tpImtI7n4KK0z6NPFxnuKOW0eSaWEsqN-g_s4 HTTP/1.1" 200 908
+2018-11-22 09:57:19,699:DEBUG:acme.client:Received response:
+HTTP 200
+Server: nginx
+Content-Type: application/json
+Content-Length: 908
+X-Frame-Options: DENY
+Strict-Transport-Security: max-age=604800
+Expires: Thu, 22 Nov 2018 11:57:19 GMT
+Cache-Control: max-age=0, no-cache, no-store
+Pragma: no-cache
+Date: Thu, 22 Nov 2018 11:57:19 GMT
+Connection: keep-alive
+
+{
+  "identifier": {
+    "type": "dns",
+    "value": "closetinn.com.br"
+  },
+  "status": "pending",
+  "expires": "2018-11-29T11:57:19Z",
+  "challenges": [
+    {
+      "type": "dns-01",
+      "status": "pending",
+      "url": "https://acme-v02.api.letsencrypt.org/acme/challenge/liD6K9tpImtI7n4KK0z6NPFxnuKOW0eSaWEsqN-g_s4/9538349415",
+      "token": "M2uif4KlAmfLdqqN_Hdnq_LZkkrz1NlH6e3pLwL13aM"
+    },
+    {
+      "type": "http-01",
+      "status": "pending",
+      "url": "https://acme-v02.api.letsencrypt.org/acme/challenge/liD6K9tpImtI7n4KK0z6NPFxnuKOW0eSaWEsqN-g_s4/9538349416",
+      "token": "FKG13prygGWzqPbbfnOWN2QHZuholL6NAtpE27rAu-w"
+    },
+    {
+      "type": "tls-alpn-01",
+      "status": "pending",
+      "url": "https://acme-v02.api.letsencrypt.org/acme/challenge/liD6K9tpImtI7n4KK0z6NPFxnuKOW0eSaWEsqN-g_s4/9538349417",
+      "token": "uTs5Ytw6hjD-oe5hUoM0MVB9rt3xvTiz-kmDdh9fQKs"
+    }
+  ]
+}
+2018-11-22 09:57:19,700:INFO:certbot.auth_handler:Performing the following challenges:
+2018-11-22 09:57:19,700:INFO:certbot.auth_handler:dns-01 challenge for closetinn.com.br
+2018-11-22 09:57:56,877:INFO:certbot.auth_handler:Waiting for verification...
+2018-11-22 09:57:56,877:DEBUG:acme.client:JWS payload:
+{
+  "keyAuthorization": "M2uif4KlAmfLdqqN_Hdnq_LZkkrz1NlH6e3pLwL13aM.TyG9fg75sqkOyfCTikYp8YIddQW8b34iS5f4mg_92A8", 
+  "type": "dns-01", 
+  "resource": "challenge"
+}
+2018-11-22 09:57:56,879:DEBUG:acme.client:Sending POST request to https://acme-v02.api.letsencrypt.org/acme/challenge/liD6K9tpImtI7n4KK0z6NPFxnuKOW0eSaWEsqN-g_s4/9538349415:
+{
+  "protected": "eyJub25jZSI6ICJWVHRvcEstZmdGcEc5UVcyVnRKZTdfb3F1YlI0eExqMnZad0NaYjlFWS1FIiwgInVybCI6ICJodHRwczovL2FjbWUtdjAyLmFwaS5sZXRzZW5jcnlwdC5vcmcvYWNtZS9jaGFsbGVuZ2UvbGlENks5dHBJbXRJN240S0swejZOUEZ4bnVLT1cwZVNhV0VzcU4tZ19zNC85NTM4MzQ5NDE1IiwgImtpZCI6ICJodHRwczovL2FjbWUtdjAyLmFwaS5sZXRzZW5jcnlwdC5vcmcvYWNtZS9hY2N0LzQ2MjgxNjE5IiwgImFsZyI6ICJSUzI1NiJ9", 
+  "payload": "ewogICJrZXlBdXRob3JpemF0aW9uIjogIk0ydWlmNEtsQW1mTGRxcU5fSGRucV9MWmtrcnoxTmxINmUzcEx3TDEzYU0uVHlHOWZnNzVzcWtPeWZDVGlrWXA4WUlkZFFXOGIzNGlTNWY0bWdfOTJBOCIsIAogICJ0eXBlIjogImRucy0wMSIsIAogICJyZXNvdXJjZSI6ICJjaGFsbGVuZ2UiCn0", 
+  "signature": "qdoCpC4bdPZOTAP77aNDhUmIK28ayoWQillVUHV7xZSHcWvPX0QxBpeIJWei6AjzCnrwCZYsRvLprygPhakx_VCIbJUUCh50DcwowdqkigtC4VTPqkGWIwAnDM2LvxosWWaYg9lqxGCD-tMlD1g3xbx-hij1qFf1-AAqaHKmLvR0Eg2txGI8KbfWzWAuWHrkvMmp5rJA3rHrpbmOGnxBy5KBquUFM8EHkvB2iUfHK1G9Uli2KEqO5aBZu--89neryMwinNxINV6YmzTH4fQzaR4o7sYKTWUbaUBH0-tYAA02tDkyj2Iyt4KK7B3x2mlVvcx497KKjHVi5vuQKUzJXQ"
+}
+2018-11-22 09:57:57,157:DEBUG:urllib3.connectionpool:https://acme-v02.api.letsencrypt.org:443 "POST /acme/challenge/liD6K9tpImtI7n4KK0z6NPFxnuKOW0eSaWEsqN-g_s4/9538349415 HTTP/1.1" 200 222
+2018-11-22 09:57:57,158:DEBUG:acme.client:Received response:
+HTTP 200
+Server: nginx
+Content-Type: application/json
+Content-Length: 222
+Boulder-Requester: 46281619
+Link: <https://acme-v02.api.letsencrypt.org/acme/authz/liD6K9tpImtI7n4KK0z6NPFxnuKOW0eSaWEsqN-g_s4>;rel="up"
+Location: https://acme-v02.api.letsencrypt.org/acme/challenge/liD6K9tpImtI7n4KK0z6NPFxnuKOW0eSaWEsqN-g_s4/9538349415
+Replay-Nonce: do8VYwU_8I4f4C3OsMThx03AgDGr5Bnn8FKtHuabS2g
+X-Frame-Options: DENY
+Strict-Transport-Security: max-age=604800
+Expires: Thu, 22 Nov 2018 11:57:57 GMT
+Cache-Control: max-age=0, no-cache, no-store
+Pragma: no-cache
+Date: Thu, 22 Nov 2018 11:57:57 GMT
+Connection: keep-alive
+
+{
+  "type": "dns-01",
+  "status": "pending",
+  "url": "https://acme-v02.api.letsencrypt.org/acme/challenge/liD6K9tpImtI7n4KK0z6NPFxnuKOW0eSaWEsqN-g_s4/9538349415",
+  "token": "M2uif4KlAmfLdqqN_Hdnq_LZkkrz1NlH6e3pLwL13aM"
+}
+2018-11-22 09:57:57,158:DEBUG:acme.client:Storing nonce: do8VYwU_8I4f4C3OsMThx03AgDGr5Bnn8FKtHuabS2g
+2018-11-22 09:58:00,161:DEBUG:acme.client:Sending GET request to https://acme-v02.api.letsencrypt.org/acme/authz/liD6K9tpImtI7n4KK0z6NPFxnuKOW0eSaWEsqN-g_s4.
+2018-11-22 09:58:00,549:DEBUG:urllib3.connectionpool:https://acme-v02.api.letsencrypt.org:443 "GET /acme/authz/liD6K9tpImtI7n4KK0z6NPFxnuKOW0eSaWEsqN-g_s4 HTTP/1.1" 200 1101
+2018-11-22 09:58:00,550:DEBUG:acme.client:Received response:
+HTTP 200
+Server: nginx
+Content-Type: application/json
+Content-Length: 1101
+X-Frame-Options: DENY
+Strict-Transport-Security: max-age=604800
+Expires: Thu, 22 Nov 2018 11:58:00 GMT
+Cache-Control: max-age=0, no-cache, no-store
+Pragma: no-cache
+Date: Thu, 22 Nov 2018 11:58:00 GMT
+Connection: keep-alive
+
+{
+  "identifier": {
+    "type": "dns",
+    "value": "closetinn.com.br"
+  },
+  "status": "invalid",
+  "expires": "2018-11-29T11:57:19Z",
+  "challenges": [
+    {
+      "type": "dns-01",
+      "status": "invalid",
+      "error": {
+        "type": "urn:ietf:params:acme:error:dns",
+        "detail": "DNS problem: NXDOMAIN looking up TXT for _acme-challenge.closetinn.com.br",
+        "status": 400
+      },
+      "url": "https://acme-v02.api.letsencrypt.org/acme/challenge/liD6K9tpImtI7n4KK0z6NPFxnuKOW0eSaWEsqN-g_s4/9538349415",
+      "token": "M2uif4KlAmfLdqqN_Hdnq_LZkkrz1NlH6e3pLwL13aM"
+    },
+    {
+      "type": "http-01",
+      "status": "invalid",
+      "url": "https://acme-v02.api.letsencrypt.org/acme/challenge/liD6K9tpImtI7n4KK0z6NPFxnuKOW0eSaWEsqN-g_s4/9538349416",
+      "token": "FKG13prygGWzqPbbfnOWN2QHZuholL6NAtpE27rAu-w"
+    },
+    {
+      "type": "tls-alpn-01",
+      "status": "invalid",
+      "url": "https://acme-v02.api.letsencrypt.org/acme/challenge/liD6K9tpImtI7n4KK0z6NPFxnuKOW0eSaWEsqN-g_s4/9538349417",
+      "token": "uTs5Ytw6hjD-oe5hUoM0MVB9rt3xvTiz-kmDdh9fQKs"
+    }
+  ]
+}
+2018-11-22 09:58:00,551:DEBUG:certbot.reporter:Reporting to user: The following errors were reported by the server:
+
+Domain: closetinn.com.br
+Type:   None
+Detail: DNS problem: NXDOMAIN looking up TXT for _acme-challenge.closetinn.com.br
+2018-11-22 09:58:00,553:DEBUG:certbot.error_handler:Encountered exception:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/certbot/auth_handler.py", line 82, in handle_authorizations
+    self._respond(aauthzrs, resp, best_effort)
+  File "/usr/local/lib/python2.7/site-packages/certbot/auth_handler.py", line 161, in _respond
+    self._poll_challenges(aauthzrs, chall_update, best_effort)
+  File "/usr/local/lib/python2.7/site-packages/certbot/auth_handler.py", line 232, in _poll_challenges
+    raise errors.FailedChallenges(all_failed_achalls)
+FailedChallenges: Failed authorization procedure. closetinn.com.br (dns-01): urn:ietf:params:acme:error:dns :: DNS problem: NXDOMAIN looking up TXT for _acme-challenge.closetinn.com.br
+
+2018-11-22 09:58:00,554:DEBUG:certbot.error_handler:Calling registered functions
+2018-11-22 09:58:00,554:INFO:certbot.auth_handler:Cleaning up challenges
+2018-11-22 09:58:00,554:DEBUG:certbot.log:Exiting abnormally:
+Traceback (most recent call last):
+  File "/usr/local/bin/certbot", line 11, in <module>
+    sys.exit(main())
+  File "/usr/local/lib/python2.7/site-packages/certbot/main.py", line 1340, in main
+    return config.func(config, plugins)
+  File "/usr/local/lib/python2.7/site-packages/certbot/main.py", line 1225, in certonly
+    lineage = _get_and_save_cert(le_client, config, domains, certname, lineage)
+  File "/usr/local/lib/python2.7/site-packages/certbot/main.py", line 121, in _get_and_save_cert
+    lineage = le_client.obtain_and_enroll_certificate(domains, certname)
+  File "/usr/local/lib/python2.7/site-packages/certbot/client.py", line 392, in obtain_and_enroll_certificate
+    cert, chain, key, _ = self.obtain_certificate(domains)
+  File "/usr/local/lib/python2.7/site-packages/certbot/client.py", line 335, in obtain_certificate
+    orderr = self._get_order_and_authorizations(csr.data, self.config.allow_subset_of_names)
+  File "/usr/local/lib/python2.7/site-packages/certbot/client.py", line 371, in _get_order_and_authorizations
+    authzr = self.auth_handler.handle_authorizations(orderr, best_effort)
+  File "/usr/local/lib/python2.7/site-packages/certbot/auth_handler.py", line 82, in handle_authorizations
+    self._respond(aauthzrs, resp, best_effort)
+  File "/usr/local/lib/python2.7/site-packages/certbot/auth_handler.py", line 161, in _respond
+    self._poll_challenges(aauthzrs, chall_update, best_effort)
+  File "/usr/local/lib/python2.7/site-packages/certbot/auth_handler.py", line 232, in _poll_challenges
+    raise errors.FailedChallenges(all_failed_achalls)
+FailedChallenges: Failed authorization procedure. closetinn.com.br (dns-01): urn:ietf:params:acme:error:dns :: DNS problem: NXDOMAIN looking up TXT for _acme-challenge.closetinn.com.br

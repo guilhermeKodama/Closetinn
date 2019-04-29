@@ -1,0 +1,15 @@
+{
+  "name": "Closetinn API Documentation",
+  "version": "1.0.0",
+  "description": "Closetinn REST API documentation for be used by the mobile and web",
+  "title": "Closetinn REST API Documentation",
+  "url": "http://localhost:3000",
+  "header": {
+    "title": "Closetinn REST API",
+    "filename": "header.md"
+  },
+  "footer": {
+    "title": "Contact or Support",
+    "filename": "footer.md"
+  }
+}

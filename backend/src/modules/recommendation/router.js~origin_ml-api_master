@@ -1,0 +1,13 @@
+const validators = require('../../middleware/validators')
+const controller = require('./controller')
+const json = require('express-jsonschema')
+const router = require('express').Router()
+const version = require('express-routes-versioning')()
+const baseUrl = '/recommendation'
+
+router.get('/text/:productId', version({ '1.0.0': controller.getRecommendationBasedOnDescription }))
+
+module.exports = {
+  router,
+  baseUrl
+}

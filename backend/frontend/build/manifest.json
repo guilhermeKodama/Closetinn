@@ -1,0 +1,15 @@
+{
+  "short_name": "Closetinn",
+  "name": "Closetinn",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "48x48",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#2b2c35",
+  "background_color": "#ffffff"
+}

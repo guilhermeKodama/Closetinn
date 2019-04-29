@@ -1,0 +1,379 @@
+########## TLS CERT ##########
+apiVersion: v1
+data:
+  tls.crt: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUZZRENDQkVpZ0F3SUJBZ0lTQTArSkVWOXdUTFo4OC9uVEc2SjRST2svTUEwR0NTcUdTSWIzRFFFQkN3VUEKTUVveEN6QUpCZ05WQkFZVEFsVlRNUll3RkFZRFZRUUtFdzFNWlhRbmN5QkZibU55ZVhCME1TTXdJUVlEVlFRRApFeHBNWlhRbmN5QkZibU55ZVhCMElFRjFkR2h2Y21sMGVTQllNekFlRncweE9ERXhNakl4TURVd01UZGFGdzB4Ck9UQXlNakF4TURVd01UZGFNQjh4SFRBYkJnTlZCQU1URkhkM2R5NWpiRzl6WlhScGJtNHVZMjl0TG1KeU1JSUIKSWpBTkJna3Foa2lHOXcwQkFRRUZBQU9DQVE4QU1JSUJDZ0tDQVFFQW1kdEhhNVZ2RmVvT2hucmxrb0wxTFdwZwp5VXBYTTdIdU85dGhqVVNrM1NWamhoWWYvTXU5c1BLZDdQRHZURDkySS9sN0Z4L0MwMzFDSytWdnljRkQwamd6CllQdTFDWTZ5dVB5YmMxWm0rWlZKQVNmekFWVDcyWmJyaHRweTBVa044RHBpaFV4M2Z5ZFlGR2tQbGd3UUt0NisKemlCT1dEWUJoY3JsOTliOWVYYnZtbGtJVkdSNVJQWURYd0JDeE1RSHZoeW9lckxDZkgvZGFKSFZDOHRzc05PawpRL1V1QXo5a3dRWWhxRk1WMnkxaGF2MkVxZVh2dnRGa0tsZk1YWVh3N3d1WXlIeEluMklNYjlRdHhoZXFjMm13ClBPVTJBR09aVFV2ZkJKZTg2eUVpT3lCVXVrQmdnV0ttd3d2SFkzeUtVUjU1L0NRdytTNHd4S2lKbGdpaVlRSUQKQVFBQm80SUNhVENDQW1Vd0RnWURWUjBQQVFIL0JBUURBZ1dnTUIwR0ExVWRKUVFXTUJRR0NDc0dBUVVGQndNQgpCZ2dyQmdFRkJRY0RBakFNQmdOVkhSTUJBZjhFQWpBQU1CMEdBMVVkRGdRV0JCU0wrNjBZUFFCZnpLREJidkQwCkVHT2lnYUdMc3pBZkJnTlZIU01FR0RBV2dCU29TbXBqQkgzZHV1YlJPYmVtUldYdjg2anNvVEJ2QmdnckJnRUYKQlFjQkFRUmpNR0V3TGdZSUt3WUJCUVVITUFHR0ltaDBkSEE2THk5dlkzTndMbWx1ZEMxNE15NXNaWFJ6Wlc1agpjbmx3ZEM1dmNtY3dMd1lJS3dZQkJRVUhNQUtHSTJoMGRIQTZMeTlqWlhKMExtbHVkQzE0TXk1c1pYUnpaVzVqCmNubHdkQzV2Y21jdk1COEdBMVVkRVFRWU1CYUNGSGQzZHk1amJHOXpaWFJwYm00dVkyOXRMbUp5TUV3R0ExVWQKSUFSRk1FTXdDQVlHWjRFTUFRSUJNRGNHQ3lzR0FRUUJndDhUQVFFQk1DZ3dKZ1lJS3dZQkJRVUhBZ0VXR21oMApkSEE2THk5amNITXViR1YwYzJWdVkzSjVjSFF1YjNKbk1JSUJCQVlLS3dZQkJBSFdlUUlFQWdTQjlRU0I4Z0R3CkFIWUE0bWxMcmlibzZVQUo2SVlidGp1RDFEN24vblNJKzZTUEtKTUJuZDN4Mi80QUFBRm5PMEdsdlFBQUJBTUEKUnpCRkFpQWF0eVdtMEthRndwL3Ntak9KT3krc28wYzRGTEI5WjRaU0w5ZHhwd1FSSHdJaEFNbnBPeFF3Q25KRgp4VGJ3ZDU2MkgvZ0sza0FoYlBDRWhzVE5aMVdGQ0NvcUFIWUFZL0xiemVnN3pDelBDM0tFSjFkck02U05ZWGVQCnZYV21PTEhIYUZSTDJJMEFBQUZuTzBHbHBBQUFCQU1BUnpCRkFpQk8vN1ZWaFNkbEN5Uk1xdmJKZjVEdGtsWkgKTUZwTzR1R1dXdWZvcDQ4NlVnSWhBTFZpblZjVWt6cTJWNTY2VUFQNHRMTGxrUXQwamp3UkdiMGpGZTczbnhBRApNQTBHQ1NxR1NJYjNEUUVCQ3dVQUE0SUJBUUNjcHFBaGQzT1RqdEllOHFLSGxYbnM5WWlkTStGVmg4dWRHQW5uCi9TQ2VUMkhhUUJBaVBCRXlUVjRzRXZtZnNHY3JVNzIxU0hZOHh5OEpPQkhSeUlpbXk0Skp0S3poRCtqS3RBM2IKTG1kdm1aaVg4MlZPVUNCOUhYOG1pZUtsLzR4L1pOWUZ6aENnRW1LR1VIMlA2Q3pXMHJwa3ZZTERLOThSNnFWSgpoTlV4ZVoxR2xhRWYxanRmd1FPeENRRFVyWGxkSzhhRlBPbTMyWHFyYkhrYVUzcFpaMGVqTEtSaXhJTUlia0wzCm9sd1FNTFY3TVdNZHU4UEt3eGxWblJYQ1VhNWZESERMVytrMGJBR1p5dStqRmtiLzlURm1wbzdySUxCY0VQTkkKYTVvaWduWVRXUUJNK3pqeHBhcnF1bmpBaDh1Z3FuVnhWUzJVd2hPVDM5N1ppNEhBCi0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0KLS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUVrakNDQTNxZ0F3SUJBZ0lRQ2dGQlFnQUFBVk9GYzJvTGhleW5DREFOQmdrcWhraUc5dzBCQVFzRkFEQS8KTVNRd0lnWURWUVFLRXh0RWFXZHBkR0ZzSUZOcFoyNWhkSFZ5WlNCVWNuVnpkQ0JEYnk0eEZ6QVZCZ05WQkFNVApEa1JUVkNCU2IyOTBJRU5CSUZnek1CNFhEVEUyTURNeE56RTJOREEwTmxvWERUSXhNRE14TnpFMk5EQTBObG93ClNqRUxNQWtHQTFVRUJoTUNWVk14RmpBVUJnTlZCQW9URFV4bGRDZHpJRVZ1WTNKNWNIUXhJekFoQmdOVkJBTVQKR2t4bGRDZHpJRVZ1WTNKNWNIUWdRWFYwYUc5eWFYUjVJRmd6TUlJQklqQU5CZ2txaGtpRzl3MEJBUUVGQUFPQwpBUThBTUlJQkNnS0NBUUVBbk5NTThGcmxMa2UzY2wwM2c3Tm9ZekRxMXpVbUdTWGh2YjQxOFhDU0w3ZTRTMEVGCnE2bWVOUWhZN0xFcXhHaUhDNlBqZGVUbTg2ZGljYnA1Z1dBZjE1R2FuL1BRZUdkeHlHa09sWkhQL3VhWjZXQTgKU014K3lrMTNFaVNkUnh0YTY3bnNIamNBSEp5c2U2Y0Y2czVLNjcxQjVUYVl1Y3Y5YlR5V2FOOGpLa0tRRElaMApaOGgvcFpxNFVtRVVFejlsNllLSHk5djZEbGIyaG9uemhUK1hocSt3M0JydmF3MlZGbjNFSzZCbHNwa0VObldBCmE2eEs4eHVRU1hndm9wWlBLaUFsS1FUR2RNRFFNYzJQTVRpVkZycW9NN2hEOGJFZnd6Qi9vbmt4RXowdE52amoKL1BJemFyazVNY1d2eEkwTkhXUVdNNnI2aENtMjFBdkEySDNEa3dJREFRQUJvNElCZlRDQ0FYa3dFZ1lEVlIwVApBUUgvQkFnd0JnRUIvd0lCQURBT0JnTlZIUThCQWY4RUJBTUNBWVl3ZndZSUt3WUJCUVVIQVFFRWN6QnhNRElHCkNDc0dBUVVGQnpBQmhpWm9kSFJ3T2k4dmFYTnlaeTUwY25WemRHbGtMbTlqYzNBdWFXUmxiblJ5ZFhOMExtTnYKYlRBN0JnZ3JCZ0VGQlFjd0FvWXZhSFIwY0RvdkwyRndjSE11YVdSbGJuUnlkWE4wTG1OdmJTOXliMjkwY3k5awpjM1J5YjI5MFkyRjRNeTV3TjJNd0h3WURWUjBqQkJnd0ZvQVV4S2V4cEhzc2NmcmI0VXVRZGYvRUZXQ0ZpUkF3ClZBWURWUjBnQkUwd1N6QUlCZ1puZ1F3QkFnRXdQd1lMS3dZQkJBR0MzeE1CQVFFd01EQXVCZ2dyQmdFRkJRY0MKQVJZaWFIUjBjRG92TDJOd2N5NXliMjkwTFhneExteGxkSE5sYm1OeWVYQjBMbTl5WnpBOEJnTlZIUjhFTlRBegpNREdnTDZBdGhpdG9kSFJ3T2k4dlkzSnNMbWxrWlc1MGNuVnpkQzVqYjIwdlJGTlVVazlQVkVOQldETkRVa3d1ClkzSnNNQjBHQTFVZERnUVdCQlNvU21wakJIM2R1dWJST2JlbVJXWHY4Nmpzb1RBTkJna3Foa2lHOXcwQkFRc0YKQUFPQ0FRRUEzVFBYRWZOaldEamRHQlg3Q1ZXK2RsYTVjRWlsYVVjbmU4SWtDSkx4V2g5S0VpazNKSFJSSEdKbwp1TTJWY0dmbDk2UzhUaWhSelp2b3JvZWQ2dGk2V3FFQm10enczV29kYXRnK1Z5T2VwaDRFWXByLzF3WEt0eDgvCndBcEl2SlN3dG1WaTRNRlU1YU1xclNERTZlYTczTWoydGNNeW81ak1kNmptZVdVSEs4c28vam9XVW9IT1Vnd3UKWDRQbzFRWXorM2RzemtEcU1wNGZrbHhCd1hSc1cxMEtYelBNVForc09QQXZleXhpbmRtamtXOGxHeStRc1JsRwpQZlorRzZaNmg3bWplbTBZK2lXbGtZY1Y0UElXTDFpd0JpOHNhQ2JHUzVqTjJwOE0rWCtRN1VOS0VrUk9iM042CktPcWtxbTU3VEgySDNlREpBa1NuaDYvRE5GdTBRZz09Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K
+  tls.key: LS0tLS1CRUdJTiBQUklWQVRFIEtFWS0tLS0tCk1JSUV2Z0lCQURBTkJna3Foa2lHOXcwQkFRRUZBQVNDQktnd2dnU2tBZ0VBQW9JQkFRQ1oyMGRybFc4VjZnNkcKZXVXU2d2VXRhbURKU2xjenNlNDcyMkdOUktUZEpXT0dGaC84eTcydzhwM3M4TzlNUDNZaitYc1hIOExUZlVJcgo1Vy9Kd1VQU09ETmcrN1VKanJLNC9KdHpWbWI1bFVrQkovTUJWUHZabHV1RzJuTFJTUTN3T21LRlRIZC9KMWdVCmFRK1dEQkFxM3I3T0lFNVlOZ0dGeXVYMzF2MTVkdSthV1FoVVpIbEU5Z05mQUVMRXhBZStIS2g2c3NKOGY5MW8Ka2RVTHkyeXcwNlJEOVM0RFAyVEJCaUdvVXhYYkxXRnEvWVNwNWUrKzBXUXFWOHhkaGZEdkM1aklmRWlmWWd4dgoxQzNHRjZwemFiQTg1VFlBWTVsTlM5OEVsN3pySVNJN0lGUzZRR0NCWXFiREM4ZGpmSXBSSG5uOEpERDVMakRFCnFJbVdDS0poQWdNQkFBRUNnZ0VBTFVrbnVuamZtNW1xOE5aWG9Fby9sRUNOZ0hJTFBNSVFsem01ZXZWTGVYUTUKMlF2R0dvaDFxeEdlZmxGa2ZoTG4yU3JqbWlqVkZaNzJ6U2paUUk5TVFTSWRyVndwSzBqL1BnZk1VYVNLNXNlVQpGMjBFejgyTjI3dmFVM1VVK3BrQUswZGtIRXdubUJ1aWgwOXRNUU1YOXlaZER4cmZOSU9nNnhxUG1lV0Q4aTRrCjlHOEwyTzcwMVl3NmdjbG1aSVpKNzVnMi94SWc0SmpFTG9NRXZsV1gzU3pKQXFaS2IwdDUwMGp3MWRzNk1RQnkKN2hmV2tJeHNWSEZzZW9DWjhMNll3T2RiNmp6cG9NeE1vaDVJbmU0MitXZ2RKU0lTNHF2MWRkUXltYVRPOE50bwozUHlWWTNWbThsTTZRcHJpaDM2YzUxMEhPclRPUDlFU24vUHlVaG4zQ1FLQmdRREw2bTE5YXNCREQwcHQvYnBrCmNuc3lJSDZ5Y3BBbnNjMXl1YlRXdWZPRFRwTWJXV29LMWtQQ2poMlJHWDhXM1FRdnhtUHFEOGxEU1B6SUJxaHcKcFNEdGdpNk5CM1BGN0tLOHo0TG1RZ3BxUzJkcUg1bGJTNDJJNSs5YjBKanZrNjF3cy85T1BvSEUrY1M0ZnpReQpURXUzeVh5RmdvcGk3UFIrLzBsUVJFdHZld0tCZ1FEQko1bGROUW1ObTBsU3lRY2V4RnFqWDIweDhuWTJvMlNCClFPakp2NEx5Z1E4Y1Z0OG40UkxEZVFYZG9FUDZLTG5uTmhnczJEdjdXK0FkOVdHSDBNNXJXRVBpNG1MSVVvaFoKZnBIei9Bbkp3Wjc0MVZuRElJSERuSzRTTndDZ01wdE1WL0c0Mk1QQVdQUU5kRkhTS01YbnFHTDlLR2hZRHlkdApjQWZ6Q09kQTB3S0JnUUNOV29abnFEWjZ4Z0M4V21SNCtQcjVkcGtkTGxsTGl1OTJGZEdMLy84VUNNWGs4WWlXCjFvekdNeW0veWNMVm9JUWtjZ3dVMXJpWGtlTFk3ZlNaa1g1UDVpeEt5dDJ3V0NjL1owSEFTQXRjUDhVQ1JjRlQKRGY2ZzV0Wi8rUXZyRjUzbFFJRThSZ3hDOVRrdkE4NjFCenA5dm9nNUxKS3RuTUNud0dPYjVwdThQUUtCZ1FDegphNkpGZDNmWlIwNzBESEtGdk9WbzdzS1M2K090VzFlSHpSQ3dIeXAzTXpVaklQc0hvMFgzdDVxZ1JUZi96d2JvCjVGSE9qa29oY2pXYi9vekxTVVlGWnFjZ3dTUDdhdGJuTXZCRzBHOFRMNzBJN2I0RXlGUmhyVS93OFpDdVBuUU4KbFgrZk1oT2J2OFZzSGduSEMwTFNycExORUZUa3Y2YmpQSGJWNWdaU0t3S0JnQTlya0N0TUtxT1RPVmxXNDEzcwp2VTF4NGo3VTVGd2tyZlB3OTQ4ZW54SjVUczVyTW9CQ25oclM5Z0oyR05oYStzRkV2WDlhbFgzZktEQ3QvcXdkCitnbThwaHA4VlFjcGZqSERPbm5XdHFBTWh3MzhBWjhVcHFpWmZMTTE2QkQ2Mm82RHVidFcwa1pISGNZd3puUDcKSDlPOFVXRmdscGQ4VU8xTko3UlpJRXdhCi0tLS0tRU5EIFBSSVZBVEUgS0VZLS0tLS0K
+kind: Secret
+metadata:
+  name: closetinn-tls-1
+type: Opaque
+---
+apiVersion: v1
+data:
+  tls.crt: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUZXVENDQkVHZ0F3SUJBZ0lTQStLU2lSdTYwYzRrUk5JeXhNNjJnQi9XTUEwR0NTcUdTSWIzRFFFQkN3VUEKTUVveEN6QUpCZ05WQkFZVEFsVlRNUll3RkFZRFZRUUtFdzFNWlhRbmN5QkZibU55ZVhCME1TTXdJUVlEVlFRRApFeHBNWlhRbmN5QkZibU55ZVhCMElFRjFkR2h2Y21sMGVTQllNekFlRncweE9ERXhNakl4TVRBeE1qaGFGdzB4Ck9UQXlNakF4TVRBeE1qaGFNQnN4R1RBWEJnTlZCQU1URUdOc2IzTmxkR2x1Ymk1amIyMHVZbkl3Z2dFaU1BMEcKQ1NxR1NJYjNEUUVCQVFVQUE0SUJEd0F3Z2dFS0FvSUJBUURFMDEwUWJ0bjU3UHdyL0VXaG5aalYwTFBlU1RWeApPdjhiVS94aHJzQkFiSUtCWHJZR1h0aFBBdGVXNWkrbEhJcVY1a3ZTVlJ1TFF4MEhzT0c3bm5zTGovRFdPY1l5CksySHFxR2Vmc1JJaGI2R2lqVzM2bHdNZzFoQ1VvQ2pQK3JTQ0w1RVRKUDhDMFRuOVNMd25kakZMSjBzZ2t6bXAKQ015aWpXRmF6dGhQTWJ1cEdSa3NHckZZL2ZyUTV0bkxPa2lZMzdtaVdNREVhOFBVL1pwM2dTNW0yRC9RZjRHVgo4dVdnVHo5UjlzK2lrZ3VTV3AyQlBDdXA5T3JJZnhTNjJ3aExRSHpaQnE5a201RkkzSFg2bFVaNnc5eDliK1l0CnJPSkU1L1puWXZlN0p5YXhTdG4rZ3hqdjMxZHVxUUJqMUNvMHBVdFJPV1l5S2RxSzkvSzQ1OHFGQWdNQkFBR2oKZ2dKbU1JSUNZakFPQmdOVkhROEJBZjhFQkFNQ0JhQXdIUVlEVlIwbEJCWXdGQVlJS3dZQkJRVUhBd0VHQ0NzRwpBUVVGQndNQ01Bd0dBMVVkRXdFQi93UUNNQUF3SFFZRFZSME9CQllFRlArMTRldG5TdUllcmVQODhncE5kclZhCkhUTjBNQjhHQTFVZEl3UVlNQmFBRktoS2FtTUVmZDI2NXRFNXQ2WkZaZS96cU95aE1HOEdDQ3NHQVFVRkJ3RUIKQkdNd1lUQXVCZ2dyQmdFRkJRY3dBWVlpYUhSMGNEb3ZMMjlqYzNBdWFXNTBMWGd6TG14bGRITmxibU55ZVhCMApMbTl5WnpBdkJnZ3JCZ0VGQlFjd0FvWWphSFIwY0RvdkwyTmxjblF1YVc1MExYZ3pMbXhsZEhObGJtTnllWEIwCkxtOXlaeTh3R3dZRFZSMFJCQlF3RW9JUVkyeHZjMlYwYVc1dUxtTnZiUzVpY2pCTUJnTlZIU0FFUlRCRE1BZ0cKQm1lQkRBRUNBVEEzQmdzckJnRUVBWUxmRXdFQkFUQW9NQ1lHQ0NzR0FRVUZCd0lCRmhwb2RIUndPaTh2WTNCegpMbXhsZEhObGJtTnllWEIwTG05eVp6Q0NBUVVHQ2lzR0FRUUIxbmtDQkFJRWdmWUVnZk1BOFFCM0FIUisyb014CnJUTVFrU0djemlWUFFuREN2LzFlUWlBSXhqYzFlZVlRZTh4V0FBQUJaenRMNVFzQUFBUURBRWd3UmdJaEFKdzYKTlE0c09MRjVIVDhMRFRGeUdTWHVoM1REWXBMeHYvUm9HcmFld2hDMUFpRUFzUkpHQjEwN2lOa094bUVlUE81OQowWlVVOEFEek9LZFB3dm54TERmOTQzOEFkZ0JqOHR2TjZEdk1MTThMY29RblYyc3pwSTFoZDQrOWRhWTRzY2RvClZFdllqUUFBQVdjN1MrTS9BQUFFQXdCSE1FVUNJUURGK2JwNnZXeWpWMUl4RXZ1YjlQenFCWVp5TXNUQXUrZzgKUWVyRGdGdXNyd0lnTEtCOWFDaUYzS05zQTh2QlJlQ3VzMkhMMTJCbDhaeXQ5LzF5Ung5WXRkY3dEUVlKS29aSQpodmNOQVFFTEJRQURnZ0VCQUcweXYwWmFoY2RIY0V2VGlVMFJrYnFWYlMyZ1BmTDU3RzVEdkVLRnpWNmJWVGJvCldsdGxWSjVFUmlPWlZWdGNaN1JtYmxpWnZMOUZSeUxGSDBZRFpjazJnMVhVN2t4dGg0WnUwS3dhTzd2UTVKWTAKZHpUcVhhcm5mZVNjaXplbG1lRkY1TnczQXRScm5WSkU2Nmg0UlRPc1pTNnRkbDlzc0hnMmhselpwa2RTckh2SApadE92YSszWHpUY1NYRzdkZEVzOFJBelVLTFF1Y1JCRGsxRzdpdGh2YmMxTnlNeUVpMkFEdTJaVm91ZUVsWVFjCm9qWjZSRkpjazRSY2pCVEx4NTRzU2EyV3RhSTg5eFB1VkFzbFN1OWNGN1BTRFBUN1hNYVJmSUZPMzhuWUNQd3gKaVRqVTM2S0M3dFJ0VVJ1NnFBL1M4UlZkeGtNSWhDVld0U3JSVXhzPQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCi0tLS0tQkVHSU4gQ0VSVElGSUNBVEUtLS0tLQpNSUlFa2pDQ0EzcWdBd0lCQWdJUUNnRkJRZ0FBQVZPRmMyb0xoZXluQ0RBTkJna3Foa2lHOXcwQkFRc0ZBREEvCk1TUXdJZ1lEVlFRS0V4dEVhV2RwZEdGc0lGTnBaMjVoZEhWeVpTQlVjblZ6ZENCRGJ5NHhGekFWQmdOVkJBTVQKRGtSVFZDQlNiMjkwSUVOQklGZ3pNQjRYRFRFMk1ETXhOekUyTkRBME5sb1hEVEl4TURNeE56RTJOREEwTmxvdwpTakVMTUFrR0ExVUVCaE1DVlZNeEZqQVVCZ05WQkFvVERVeGxkQ2R6SUVWdVkzSjVjSFF4SXpBaEJnTlZCQU1UCkdreGxkQ2R6SUVWdVkzSjVjSFFnUVhWMGFHOXlhWFI1SUZnek1JSUJJakFOQmdrcWhraUc5dzBCQVFFRkFBT0MKQVE4QU1JSUJDZ0tDQVFFQW5OTU04RnJsTGtlM2NsMDNnN05vWXpEcTF6VW1HU1hodmI0MThYQ1NMN2U0UzBFRgpxNm1lTlFoWTdMRXF4R2lIQzZQamRlVG04NmRpY2JwNWdXQWYxNUdhbi9QUWVHZHh5R2tPbFpIUC91YVo2V0E4ClNNeCt5azEzRWlTZFJ4dGE2N25zSGpjQUhKeXNlNmNGNnM1SzY3MUI1VGFZdWN2OWJUeVdhTjhqS2tLUURJWjAKWjhoL3BacTRVbUVVRXo5bDZZS0h5OXY2RGxiMmhvbnpoVCtYaHErdzNCcnZhdzJWRm4zRUs2QmxzcGtFTm5XQQphNnhLOHh1UVNYZ3ZvcFpQS2lBbEtRVEdkTURRTWMyUE1UaVZGcnFvTTdoRDhiRWZ3ekIvb25reEV6MHROdmpqCi9QSXphcms1TWNXdnhJME5IV1FXTTZyNmhDbTIxQXZBMkgzRGt3SURBUUFCbzRJQmZUQ0NBWGt3RWdZRFZSMFQKQVFIL0JBZ3dCZ0VCL3dJQkFEQU9CZ05WSFE4QkFmOEVCQU1DQVlZd2Z3WUlLd1lCQlFVSEFRRUVjekJ4TURJRwpDQ3NHQVFVRkJ6QUJoaVpvZEhSd09pOHZhWE55Wnk1MGNuVnpkR2xrTG05amMzQXVhV1JsYm5SeWRYTjBMbU52CmJUQTdCZ2dyQmdFRkJRY3dBb1l2YUhSMGNEb3ZMMkZ3Y0hNdWFXUmxiblJ5ZFhOMExtTnZiUzl5YjI5MGN5OWsKYzNSeWIyOTBZMkY0TXk1d04yTXdId1lEVlIwakJCZ3dGb0FVeEtleHBIc3NjZnJiNFV1UWRmL0VGV0NGaVJBdwpWQVlEVlIwZ0JFMHdTekFJQmdabmdRd0JBZ0V3UHdZTEt3WUJCQUdDM3hNQkFRRXdNREF1QmdnckJnRUZCUWNDCkFSWWlhSFIwY0RvdkwyTndjeTV5YjI5MExYZ3hMbXhsZEhObGJtTnllWEIwTG05eVp6QThCZ05WSFI4RU5UQXoKTURHZ0w2QXRoaXRvZEhSd09pOHZZM0pzTG1sa1pXNTBjblZ6ZEM1amIyMHZSRk5VVWs5UFZFTkJXRE5EVWt3dQpZM0pzTUIwR0ExVWREZ1FXQkJTb1NtcGpCSDNkdXViUk9iZW1SV1h2ODZqc29UQU5CZ2txaGtpRzl3MEJBUXNGCkFBT0NBUUVBM1RQWEVmTmpXRGpkR0JYN0NWVytkbGE1Y0VpbGFVY25lOElrQ0pMeFdoOUtFaWszSkhSUkhHSm8KdU0yVmNHZmw5NlM4VGloUnpadm9yb2VkNnRpNldxRUJtdHp3M1dvZGF0ZytWeU9lcGg0RVlwci8xd1hLdHg4Lwp3QXBJdkpTd3RtVmk0TUZVNWFNcXJTREU2ZWE3M01qMnRjTXlvNWpNZDZqbWVXVUhLOHNvL2pvV1VvSE9VZ3d1Clg0UG8xUVl6KzNkc3prRHFNcDRma2x4QndYUnNXMTBLWHpQTVRaK3NPUEF2ZXl4aW5kbWprVzhsR3krUXNSbEcKUGZaK0c2WjZoN21qZW0wWStpV2xrWWNWNFBJV0wxaXdCaThzYUNiR1M1ak4ycDhNK1grUTdVTktFa1JPYjNONgpLT3FrcW01N1RIMkgzZURKQWtTbmg2L0RORnUwUWc9PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+  tls.key: LS0tLS1CRUdJTiBQUklWQVRFIEtFWS0tLS0tCk1JSUV2UUlCQURBTkJna3Foa2lHOXcwQkFRRUZBQVNDQktjd2dnU2pBZ0VBQW9JQkFRREUwMTBRYnRuNTdQd3IKL0VXaG5aalYwTFBlU1RWeE92OGJVL3hocnNCQWJJS0JYcllHWHRoUEF0ZVc1aStsSElxVjVrdlNWUnVMUXgwSApzT0c3bm5zTGovRFdPY1l5SzJIcXFHZWZzUkloYjZHaWpXMzZsd01nMWhDVW9DalArclNDTDVFVEpQOEMwVG45ClNMd25kakZMSjBzZ2t6bXBDTXlpaldGYXp0aFBNYnVwR1Jrc0dyRlkvZnJRNXRuTE9raVkzN21pV01ERWE4UFUKL1pwM2dTNW0yRC9RZjRHVjh1V2dUejlSOXMraWtndVNXcDJCUEN1cDlPcklmeFM2MndoTFFIelpCcTlrbTVGSQozSFg2bFVaNnc5eDliK1l0ck9KRTUvWm5ZdmU3SnlheFN0bitneGp2MzFkdXFRQmoxQ28wcFV0Uk9XWXlLZHFLCjkvSzQ1OHFGQWdNQkFBRUNnZ0VBZjYvdksvMytBeGt1N3dvVjBpYi9RNWJGV1d0ODlCd2w2NENzdG1JNzdvOTIKaXA3NnoxOHdUUEczRXZuNTVzK0JTSVhDb296NzlYaHdtTkN6WUpnTGt4Q3FXUS9aK0NvVXQ3clFudFNzd213OQpHOHRNa2NqdUNwdFUzbGFZbzNRdExsZlZjZW9LVmJXT1BUYTJlWk0vbjFXNmMwT1BvSTFJMUJ1TUVQRW5leGZRClpQWkRZZkFaODEyQU9NOGh5eVlxY1MvdSswanl2RWFYRGkybFZPcC9HWWlZaXU2L0VCdmRJMEs0SVJVck9GMTMKSklXU0F2Qi90YThmZndHcG9meCtBeS9qRG1VVW1TRDF0a1F3eEM4cGJkdzRJV3RwRkNkQkkxTllGd3hlM0NzeApLdUNkT3h4Vlp3U3dVbm9BTVZpTmtWRWFZSHFHNWhFOTdqb0JGR0c2QVFLQmdRRHlJbXpyWlEwYnJ4c2JBalJXCm9LSGE5L2tmUXArbDBwYlZtZ3dSZnhNR2d3ZWE0cExWTTNmOHhPajJDU1BOYlc4OFZETlhVdmpwY09ZSVNmUXIKemlyb2doOG9Lek9peGx0RWNXNnFXSVZLSk1NR3NCdEFWL0hpT3FEZENwYVIzWWdBMmt0eGVSYlVWKzlHQWpxNApLRTB2eTEzclpPaXZueXJwN3ZISTNSSzk1UUtCZ1FEUUdMdCtyWkwrRFNzSkdXL215dUcxbjJTcHhOdExPbEhkCklBOXpuWnRLaGlac05rR1YwdXBrVEZYUTFobHVkZXV1akNMeW1qNjIrVncyK01xV1BpRitGS0FaMlgxaWhDaGQKMmFoSG51STI0V3YwRjFqR2Z6RGRWNVo4cHBlZHR6ZStIZjFjUTNmNFhrUDcvaTMxZ1JxL0drT0YzeUtrYVJaSApQeURneFRNUUlRS0JnRzZBb1g2b0pseE5CS3pGeThjQkZmek5rR2JneStVc2YyUEtJdG5WU1lSK1JmazhqOUEyCjVmcDRqdXpCN1JIeWNJSnkxdDl5WVdDQUFxc2p2UWhFMWJZNHRDbHIxZXZpWklLTzFmZHQ0SjZldWxhU0JrM08KRlBpdTB2MHR1TnVtNDB1b1ZDZmNJRHdXU1grRXd2R0tpdmRWODIzYkpvb0h0TmtBRUY0ZjdrNjFBb0dBYmd0MgpNMkpVNWxaT1dNeUQyWmVXVHJhUXhCcGZJV1FnNEgvUXpBSWZtZ1JoRXo2SjVsSVlNNXdPa1paMjhtd1hpMEYrClJhNzkxVUwrMmU4dEt0Q0dZNmRDbHdqbGZwQ0d6RUtLOC96NGdhOHBxSFlrTXl3VnlpZEVaSHl3bHUzSjQ1YjIKWWJFb0kwYXVTdmM2bEthR1gyTGpMRXM0aFpzdzlkSlRiNm00L0NFQ2dZRUFpczZieks5OUYrME4zZm9JTGcyNwpIcUF4aG03K2NKMitnN0JvNmxsNzV1Sm4xSXRrU2VmU2drZXNMamFFOW95WW5CWDhFMml4LzhndlpIOVFyOUo5Ci9kb3NEVE1mOUUvSkx4S0Q3M0daaUZWbGJWcUc4ejV1b3RRdjhCV3ltM1NXVko4OG5hNGRmRWVyYWFEbTFCaTYKeHMzZnF4QkZrTEE1aU9Bczc2TjNabUU9Ci0tLS0tRU5EIFBSSVZBVEUgS0VZLS0tLS0K
+kind: Secret
+metadata:
+  name: closetinn-tls-2
+type: Opaque
+---
+########## INGRESS ##########
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ingress
+  annotations:
+    kubernetes.io/ingress.allow-http: "false"
+    kubernetes.io/ingress.global-static-ip-name: "main-static-ip"
+spec:
+  tls:
+  - secretName: closetinn-tls-1
+  - secretName: closetinn-tls-2
+  rules:
+  - host: closetinn.com.br
+    http:
+      paths:
+      - backend:
+          serviceName: backend
+          servicePort: 80
+  - host: www.closetinn.com.br
+    http:
+      paths:
+      - backend:
+          serviceName: backend
+          servicePort: 80
+---
+########## REDIS ##########
+apiVersion: v1
+kind: Service
+metadata:
+  name: redis
+  labels:
+    env: production
+spec:
+  selector:
+    app: redis
+  ports:
+  - port: 6379
+    targetPort: 6379
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: redis
+  labels:
+    env: production
+    app: redis
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        env: production
+        app: redis
+    spec:
+      containers:
+      - name: redis
+        image: redis
+        resources:
+          requests:
+            cpu: 10m
+            memory: 100Mi
+        ports:
+        - containerPort: 6379
+---
+########## SOCKET SERVER PRIMARY ##########
+apiVersion: v1
+kind: Service
+metadata:
+  name: ss-primary
+  labels:
+    env: production
+spec:
+  selector:
+    app: ss-primary
+  ports:
+  - port: 80
+    targetPort: 5000
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: ss-primary
+  labels:
+    env: production
+    app: ss-primary
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        env: production
+        app: ss-primary
+    spec:
+      containers:
+      - name: closetinn-server-socket-primary
+        image: gcr.io/closetinn-197221/closetinn-server-socket:latest
+        env:
+          - name: DB_HOST
+            value: "mongodb://gkodama:azzaropourhome2@cluster0-shard-00-00-svs1p.mongodb.net:27017,cluster0-shard-00-01-svs1p.mongodb.net:27017,cluster0-shard-00-02-svs1p.mongodb.net:27017/fashionbot?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin"
+          - name: DB_PORT
+            value: "27017"
+          - name: DB_DATABASE
+            value: "fashionbot"
+        resources:
+          requests:
+            cpu: 50m
+            memory: 100Mi
+        ports:
+        - containerPort: 5000
+---
+########## SOCKET SERVER PRIMARY ##########
+apiVersion: v1
+kind: Service
+metadata:
+  name: ss-slave
+  labels:
+    env: production
+spec:
+  selector:
+    app: ss-slave
+  ports:
+  - port: 80
+    targetPort: 5000
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: ss-slave
+  labels:
+    env: production
+    app: ss-slave
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        env: production
+        app: ss-slave
+    spec:
+      containers:
+      - name: closetinn-server-socket-slave
+        image: gcr.io/closetinn-197221/closetinn-server-socket:latest
+        env:
+          - name: DB_HOST
+            value: "mongodb://gkodama:azzaropourhome2@cluster0-shard-00-00-svs1p.mongodb.net:27017,cluster0-shard-00-01-svs1p.mongodb.net:27017,cluster0-shard-00-02-svs1p.mongodb.net:27017/fashionbot?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin"
+          - name: DB_PORT
+            value: "27017"
+          - name: DB_DATABASE
+            value: "fashionbot"
+        resources:
+          requests:
+            cpu: 50m
+            memory: 100Mi
+        ports:
+        - containerPort: 5000
+---
+########## MLAPI ##########
+apiVersion: v1
+kind: Service
+metadata:
+  name: mlapi
+  labels:
+    env: production
+spec:
+  selector:
+    app: mlapi
+  ports:
+  - port: 80
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: mlapi
+  labels:
+    env: production
+    app: mlapi
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        env: production
+        app: mlapi
+    spec:
+      containers:
+      - name: closetinn-ml-api
+        image: gcr.io/closetinn-197221/closetinn-ml-api:latest
+        resources:
+          requests:
+            cpu: 10m
+            memory: 30Mi
+        ports:
+        - containerPort: 80
+---
+########## SCRAPPER ##########
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: scrapper
+  labels:
+    env: production
+    app: scrapper
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        env: production
+        app: scrapper
+    spec:
+      containers:
+      - name: closetinn-scrapper
+        image: gcr.io/closetinn-197221/closetinn-scrapper:latest
+        env:
+          - name: DB_HOST
+            value: "mongodb://gkodama:azzaropourhome2@cluster0-shard-00-00-svs1p.mongodb.net:27017,cluster0-shard-00-01-svs1p.mongodb.net:27017,cluster0-shard-00-02-svs1p.mongodb.net:27017/fashionbot?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin"
+          - name: DB_PORT
+            value: "27017"
+          - name: DB_DATABASE
+            value: "fashionbot"
+          - name: COLLECTION_CLOTHES
+            value: "clothes"
+          - name: COLLECTION_PRICE_HISTORY
+            value: "clothesPriceHistory"
+        resources:
+          requests:
+            cpu: 10m
+            memory: 50Mi
+---
+########## CRONJOBS ##########
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: cronjobs
+  labels:
+    env: production
+    app: cronjobs
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        env: production
+        app: cronjobs
+    spec:
+      containers:
+      - name: closetinn-cron-jobs
+        image: gcr.io/closetinn-197221/closetinn-cron-jobs:latest
+        env:
+          - name: CLOSETINN_ENV
+            value: "production"
+          - name: ADMIN_EMAILS
+            value: "guilherme.kodama@gmail.com,kayron.scabral@gmail.com"
+          - name: DB_HOST
+            value: "mongodb://gkodama:azzaropourhome2@cluster0-shard-00-00-svs1p.mongodb.net:27017,cluster0-shard-00-01-svs1p.mongodb.net:27017,cluster0-shard-00-02-svs1p.mongodb.net:27017/fashionbot?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin"
+          - name: DB_PORT
+            value: "27017"
+          - name: DB_DATABASE
+            value: "fashionbot"
+          - name: TYPEFORM_API
+            value: "https://api.typeform.com"
+          - name: TYPEFORM_TOKEN
+            value: "Bearer 5Wi7gdVxeffTeEGgpe9HQHTwsVwBTDgbU5tKWh6bzkTd"
+        resources:
+          requests:
+            cpu: 10m
+            memory: 50Mi
+---
+########## BACKEND ##########
+# kind: Service
+# apiVersion: v1
+# metadata:
+#  name: my-service
+# spec:
+#  selector:
+#    app: MyApp
+#  ports:
+#  - protocol: TCP
+#    port: 80
+#    targetPort: 9376
+# This specification will create a new Service object named “my-service” which
+# targets TCP port 9376 on any Pod with the "app=MyApp" label.
+# This Service will also be assigned an IP address (sometimes called the “cluster IP”),
+# which is used by the service proxies (see below).
+# The Service’s selector will be evaluated continuously and the results will be POSTed to an
+# Endpoints object also named “my-service”.
+# Note that a Service can map an incoming port to any targetPort.
+# By default the targetPort will be set to the same value as the port field.
+# Perhaps more interesting is that targetPort can be a string,
+# referring to the name of a port in the backend Pods.
+# The actual port number assigned to that name can be different in each backend Pod.
+# This offers a lot of flexibility for deploying and evolving your Services.
+# For example, you can change the port number that pods expose in the next version of your
+# backend software, without breaking clients.
+#
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend
+  labels:
+    env: production
+spec:
+  selector:
+    app: backend
+  type: NodePort #LoadBalancer
+  ports:
+  - port: 80
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: backend
+  labels:
+    env: production
+    app: backend
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        env: production
+        app: backend
+    spec:
+      containers:
+      - name: closetinn-backend
+        image: gcr.io/closetinn-197221/closetinn-backend:latest
+        env:
+          - name: DB_HOST
+            value: "mongodb://gkodama:azzaropourhome2@cluster0-shard-00-00-svs1p.mongodb.net:27017,cluster0-shard-00-01-svs1p.mongodb.net:27017,cluster0-shard-00-02-svs1p.mongodb.net:27017/fashionbot?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin"
+          - name: DB_PORT
+            value: "27017"
+          - name: DB_DATABASE
+            value: "fashionbot"
+          - name: TOKEN_SECRET
+            value: "018c67801bbc6f65b3ef0ecd99e7c0e8"
+          - name: PASSWORD_SECRET
+            value: "c0a6137c0a9b8d24da27cf972e8ddc14"
+          - name: FACEBOOK_GRAPH_HOST
+            value: "https://graph.facebook.com"
+          - name: FACEBOOK_APP_ACCESS_TOKEN
+            value: "1557384474356665|jJXKWOeYqEPpSYKrP8o9hqT9p-o"
+          - name: PREFIX
+            value: "/api"
+          - name: CLOTHES_COLLECTION
+            value: "clothes"
+          - name: USERS_COLLECTION
+            value: "users"
+          - name: CLOUDINARY_USER
+            value: "closetinn"
+          - name: CLOUDINARY_API_KEY
+            value: "494558945392248"
+          - name: CLOUDINARY_API_SECRET
+            value: "RXGDWht3A8SbwJhIyb9nO7jETXU"
+        resources:
+          requests:
+            cpu: 10m
+            memory: 50Mi
+        ports:
+        - containerPort: 80

@@ -1,0 +1,10 @@
+@import '../../styles/styles.scss';
+
+.Chip {
+  margin: .5rem;
+
+  .checkIcon {
+    font-size: $font-size-medium;
+    margin-left: $s-size;
+  }
+}

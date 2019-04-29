@@ -1,0 +1,21 @@
+html, body {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  background-color: 'red';
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  position: absolute;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  background-color: white !important;
+}
+
+#root {
+  height: 100%;
+}
